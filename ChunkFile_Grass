@@ -1,0 +1,32 @@
+/*
+Chunk Format:
+Chunk ID and start marker
+Chunk Difficulty Rating
+ExtraParam1
+ExtraParam2
+First Chunk Object properties(object type, xCoordinate, yCoordinate, width, height)
+Second Chunk Object properties
+...
+Last Chunk Object properties
+Endchunk marker
+
+Example:
+
+ChunkID=12
+3
+0
+0
+0,3,5,10,5
+0,6,36,20,1
+2,10,22,5,1
+EndChunk
+
+*/
+
+ChunkID=0
+6
+7
+8
+0,1,40,39,4
+2,10,30,10,1
+EndChunk

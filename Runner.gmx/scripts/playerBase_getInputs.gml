@@ -1,0 +1,51 @@
+//Get inputs from a multi touch device (phone)
+//NOTE! step function calling this function must include 
+//      the clear pressed inputs line at BOTTOM of script
+
+//Pressed
+if(device_mouse_check_button_pressed(0,mb_left)){
+    if(device_mouse_x(0)<buttonDivider)
+        actionButton1Pressed=1; 
+    else
+        actionButton2Pressed=1; 
+}
+if(device_mouse_check_button_pressed(1,mb_left)){
+    if(device_mouse_x(1)<buttonDivider)
+        actionButton1Pressed=1;  
+    else
+        actionButton2Pressed=1;  
+}
+//Held
+if(device_mouse_check_button(0,mb_left)){
+    if(device_mouse_x(0)<buttonDivider)
+        actionButton1Held=1; 
+    else
+        actionButton2Held=1; 
+}
+if(device_mouse_check_button(1,mb_left)){
+    if(device_mouse_x(1)<buttonDivider)
+        actionButton1Held=1;  
+    else
+        actionButton2Held=1;  
+}
+//Released
+if(device_mouse_check_button_released(0,mb_left)){
+    if(device_mouse_x(0)<buttonDivider){
+        actionButton1Held=0; 
+        actionButton1Pressed=0;
+        }
+    else{
+        actionButton2Held=0; 
+        actionButton2Pressed=0;
+        }
+}
+if(device_mouse_check_button_released(1,mb_left)){
+    if(device_mouse_x(1)<buttonDivider){
+        actionButton1Held=0;  
+        actionButton1Pressed=0;
+        }
+    else{
+        actionButton2Held=0;  
+        actionButton2Pressed=0;
+        }
+}
